@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-dependencies</artifactId>
+    <version>2.5.6</version>
+  </parent>
+
+  <groupId>com.github.sbpb</groupId>
+  <artifactId>library-disclosure-spring-boot-starter</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>library-disclosure-spring-boot-starter</name>
+  <description>Disclosure of libraries and licenses</description>
+  <url>https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter</url>
+  <inceptionYear>2021</inceptionYear>
+
+  <organization>
+    <name>Spring Boot Productivity Boost</name>
+    <url>https://github.com/Spring-Boot-Productivity-Boost</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/blob/master/LICENSE</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>pixelstuermer</id>
+      <name>Philipp Montesano</name>
+      <url>https://github.com/pixelstuermer</url>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter.git</connection>
+    <developerConnection>git@github.com:Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter.git</developerConnection>
+    <url>https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter</url>
+  </scm>
+
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/issues</url>
+  </issueManagement>
+
+  <properties>
+    <!-- Java -->
+    <java.version>11</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <!-- Encoding -->
+    <encoding>UTF-8</encoding>
+    <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+    <!-- Lombok -->
+    <lombok.sourceDirectory>${project.basedir}/src/main/java</lombok.sourceDirectory>
+    <lombok.outputDirectory>${project.build.directory}/generated-sources/delombok</lombok.outputDirectory>
+    <!-- Other -->
+    <checkstyle.config>https://raw.githubusercontent.com/checkstyle/checkstyle/checkstyle-9.1/src/main/resources/google_checks.xml</checkstyle.config>
+    <!-- Dependency versions -->
+    <checkstyle.version>9.1</checkstyle.version>
+    <!-- Plugin versions -->
+    <gitflow-maven-plugin.version>1.16.0</gitflow-maven-plugin.version>
+    <sortpom-maven-plugin.version>3.0.0</sortpom-maven-plugin.version>
+    <license-maven-plugin.version>2.0.0</license-maven-plugin.version>
+    <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
+    <spotbugs-maven-plugin.version>4.4.2.2</spotbugs-maven-plugin.version>
+    <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-junit-jupiter</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.amashchenko.maven.plugin</groupId>
+        <artifactId>gitflow-maven-plugin</artifactId>
+        <version>${gitflow-maven-plugin.version}</version>
+        <configuration>
+          <pushRemote>true</pushRemote>
+          <versionDigitToIncrement>1</versionDigitToIncrement>
+          <commitMessagePrefix>[GitFlow]</commitMessagePrefix>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.github.ekryd.sortpom</groupId>
+        <artifactId>sortpom-maven-plugin</artifactId>
+        <version>${sortpom-maven-plugin.version}</version>
+        <configuration>
+          <verifyFail>Stop</verifyFail>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <configuration>
+          <fail>true</fail>
+          <rules>
+            <requireReleaseDeps/>
+            <banDuplicatePomDependencyVersions/>
+          </rules>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <configuration>
+          <failOnWarning>true</failOnWarning>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>analyze-only</goal>
+            </goals>
+            <configuration>
+              <usedDependencies>
+                <dependency>org.projectlombok:lombok</dependency>
+                <dependency>org.junit.jupiter:junit-jupiter-engine</dependency>
+              </usedDependencies>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>display-property-updates</goal>
+            </goals>
+            <phase>verify</phase>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>${license-maven-plugin.version}</version>
+        <configuration>
+          <failOnMissing>true</failOnMissing>
+          <failOnBlacklist>true</failOnBlacklist>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>add-third-party</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${maven-checkstyle-plugin.version}</version>
+        <configuration>
+          <failsOnError>false</failsOnError>
+          <failOnViolation>false</failOnViolation>
+          <consoleOutput>true</consoleOutput>
+          <includeTestSourceDirectory>true</includeTestSourceDirectory>
+          <configLocation>${checkstyle.config}</configLocation>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>com.puppycrawl.tools</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>${checkstyle.version}</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
+        <version>${spotbugs-maven-plugin.version}</version>
+        <configuration>
+          <failOnError>false</failOnError>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok-maven-plugin</artifactId>
+        <version>${lombok-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>delombok</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <sourceDirectory>${lombok.outputDirectory}</sourceDirectory>
+  </build>
+
+</project>
