@@ -1,0 +1,25 @@
+# IntelliJ
+*.iml
+.idea/*
+!.idea/runConfigurations/
+!.idea/dictionaries/
+!.idea/codeStyles/
+
+# Packages
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Maven
+target/
+out/
+
+# Java
+*.class
+
+# Others
+*.log
+*.bak
