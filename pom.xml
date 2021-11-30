@@ -60,6 +60,9 @@
     <encoding>UTF-8</encoding>
     <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+    <!-- Resources -->
+    <resources.outputDirectory>${project.build.outputDirectory}</resources.outputDirectory>
+    <resources.generatedResourcesDirectory>${project.build.directory}/generated-resources</resources.generatedResourcesDirectory>
     <!-- Lombok -->
     <lombok.sourceDirectory>${project.basedir}/src/main/java</lombok.sourceDirectory>
     <lombok.outputDirectory>${project.build.directory}/generated-sources/delombok</lombok.outputDirectory>
@@ -198,7 +201,9 @@
           <execution>
             <goals>
               <goal>add-third-party</goal>
+              <goal>download-licenses</goal>
             </goals>
+            <phase>generate-resources</phase>
           </execution>
         </executions>
       </plugin>
@@ -263,6 +268,29 @@
             <goals>
               <goal>jar</goal>
             </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <phase>process-resources</phase>
+            <configuration>
+              <outputDirectory>${resources.outputDirectory}</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>${resources.generatedResourcesDirectory}</directory>
+                  <includes>
+                    <include>licenses.xml</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
           </execution>
         </executions>
       </plugin>
