@@ -1,0 +1,17 @@
+name: CI build
+on: [ push,pull_request ]
+jobs:
+  test-and-package:
+    name: Test and package
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub checkout
+        uses: actions/checkout@v2
+      - name: JDK setup
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+          cache: 'maven'
+      - name: Maven build
+        run: mvn -B clean package
