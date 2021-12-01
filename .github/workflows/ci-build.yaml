@@ -1,5 +1,5 @@
 name: CI build
-on: [ push, pull_request ]
+on: push
 jobs:
   ci-build:
     name: CI build
