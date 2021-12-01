@@ -1,8 +1,8 @@
 name: CI build
 on: push
 jobs:
-  ci-build:
-    name: CI build
+  test-and-package:
+    name: Test and Package
     runs-on: ubuntu-latest
     steps:
       - name: GitHub checkout
