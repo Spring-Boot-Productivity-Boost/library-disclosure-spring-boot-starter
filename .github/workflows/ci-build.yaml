@@ -2,7 +2,7 @@ name: CI build
 on: push
 jobs:
   test-and-package:
-    name: Test and Package
+    name: Test and package
     runs-on: ubuntu-latest
     steps:
       - name: GitHub checkout
