@@ -1,4 +1,4 @@
-package com.github.sbpb.librarydisclosure.provider.data;
+package com.github.sbpb.librarydisclosure.library.data;
 
 import java.util.List;
 import lombok.AccessLevel;
