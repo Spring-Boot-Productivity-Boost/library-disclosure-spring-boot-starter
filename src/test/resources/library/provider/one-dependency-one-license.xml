@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licenseSummary>
+  <dependencies>
+    <dependency>
+      <groupId>group1</groupId>
+      <artifactId>artifact1</artifactId>
+      <version>1.0.0</version>
+      <licenses>
+        <license>
+          <name>name1</name>
+          <url>url1</url>
+          <file>file1</file>
+        </license>
+      </licenses>
+    </dependency>
+  </dependencies>
+</licenseSummary>

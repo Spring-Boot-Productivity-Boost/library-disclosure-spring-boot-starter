@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licenseSummary>
+  <dependencies>
+    <dependency>
+      <groupId>group1</groupId>
+      <artifactId>artifact1</artifactId>
+      <version>1.0.0</version>
+      <licenses>
+        <license>
+          <name>name1</name>
+          <url>url1</url>
+          <file>file1</file>
+        </license>
+        <license>
+          <name>name2</name>
+          <url>url2</url>
+          <file>file2</file>
+          <comments>comment2</comments>
+          <distribution>distribution2</distribution>
+        </license>
+      </licenses>
+    </dependency>
+    <dependency>
+      <groupId>group2</groupId>
+      <artifactId>artifact2</artifactId>
+      <version>2.0.0</version>
+      <licenses>
+        <license>
+          <name>name3</name>
+          <url>url3</url>
+          <file>file3</file>
+        </license>
+        <license>
+          <name>name4</name>
+          <url>url4</url>
+          <file>file4</file>
+          <comments>comment4</comments>
+          <distribution>distribution4</distribution>
+        </license>
+      </licenses>
+    </dependency>
+  </dependencies>
+</licenseSummary>
