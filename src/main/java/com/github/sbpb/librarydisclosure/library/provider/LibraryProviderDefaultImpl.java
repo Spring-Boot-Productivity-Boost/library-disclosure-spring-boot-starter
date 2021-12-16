@@ -13,11 +13,18 @@ import org.springframework.core.io.Resource;
 @RequiredArgsConstructor
 public class LibraryProviderDefaultImpl implements LibraryProvider {
 
-  private final Resource resource;
   private final XmlMapper xmlMapper;
+  private final Resource resource;
+
+  private LicenseSummary licenseSummary;
 
   @Override
   public LicenseSummary getLicenseSummary() throws IOException {
-    return xmlMapper.readValue(resource.getFile(), LicenseSummary.class);
+    if (licenseSummary == null) {
+      licenseSummary = xmlMapper.readValue(resource.getFile(), LicenseSummary.class);
+    }
+
+    return licenseSummary;
   }
+
 }
