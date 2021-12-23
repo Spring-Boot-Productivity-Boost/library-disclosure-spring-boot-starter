@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "sbpb.librarydisclosure.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto-configuration for library disclosure."
+    }
+  ]
+}
