@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -26,6 +27,7 @@ import org.springframework.context.annotation.Configuration;
 @ConditionalOnClass(LibraryProvider.class)
 @AutoConfigureAfter(JacksonAutoConfiguration.class)
 @EnableConfigurationProperties(LibraryDisclosureProperty.class)
+@ConditionalOnProperty(prefix = "sbpb.librarydisclosure", name = "enabled", havingValue = "true", matchIfMissing = true)
 public class LibraryDisclosureAutoConfiguration {
 
   @Bean
