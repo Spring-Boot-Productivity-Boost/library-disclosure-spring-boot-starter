@@ -18,6 +18,7 @@ import org.springframework.context.annotation.Configuration;
  * Auto-configuration for library disclosure.
  *
  * <ul>
+ *   <li>Active, unless deactivated with the feature flag.</li>
  *   <li>Makes use of the {@link LibraryDisclosureProperty} configuration.</li>
  *   <li>When a global {@link XmlMapper} bean is available, this one is used.</li>
  * </ul>
