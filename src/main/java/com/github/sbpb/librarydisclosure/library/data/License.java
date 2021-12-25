@@ -1,14 +1,11 @@
 package com.github.sbpb.librarydisclosure.library.data;
 
-import lombok.AccessLevel;
 import lombok.Data;
-import lombok.Setter;
 
 /**
  * License report license section.
  */
 @Data
-@Setter(AccessLevel.NONE)
 public class License {
 
   private final String name;

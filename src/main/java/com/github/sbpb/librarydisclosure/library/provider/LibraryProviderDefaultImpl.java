@@ -8,7 +8,7 @@ import org.springframework.core.io.Resource;
 
 /**
  * Default implementation to load the library and license information from an XML file.
- * The XML must follow the structure of the license-maven-plugin "licenses.xml".
+ * The XML file must follow the structure of the licenses.xml of the license-maven-plugin.
  */
 @RequiredArgsConstructor
 public class LibraryProviderDefaultImpl implements LibraryProvider {

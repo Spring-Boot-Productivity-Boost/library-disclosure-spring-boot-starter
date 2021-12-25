@@ -3,10 +3,12 @@ package com.github.sbpb.librarydisclosure;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Objects;
 
 /**
  * Utility class for tests.
  */
+@SuppressWarnings("unused")
 public class TestHelper {
 
   /**
@@ -17,11 +19,10 @@ public class TestHelper {
    * @return The content of the file of the provided path
    * @throws IOException When the file cannot be read
    */
-  @SuppressWarnings("ConstantConditions")
   public static String getFileContent(String filePath, boolean trim) throws IOException {
-    final String resourcePath = TestHelper.class.getClassLoader()
-                                                .getResource(filePath)
-                                                .getPath();
+    final String resourcePath = Objects.requireNonNull(TestHelper.class.getClassLoader()
+                                                                       .getResource(filePath))
+                                       .getPath();
 
     final String fileContent = Files.readString(Path.of(resourcePath));
 

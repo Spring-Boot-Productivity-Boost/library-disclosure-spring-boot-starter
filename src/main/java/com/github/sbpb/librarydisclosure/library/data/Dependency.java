@@ -1,15 +1,12 @@
 package com.github.sbpb.librarydisclosure.library.data;
 
 import java.util.List;
-import lombok.AccessLevel;
 import lombok.Data;
-import lombok.Setter;
 
 /**
  * License report dependency section.
  */
 @Data
-@Setter(AccessLevel.NONE)
 public class Dependency {
 
   private final String groupId;
