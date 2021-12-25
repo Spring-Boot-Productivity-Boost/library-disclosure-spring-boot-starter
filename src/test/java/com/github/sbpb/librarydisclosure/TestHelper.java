@@ -8,6 +8,7 @@ import java.util.Objects;
 /**
  * Utility class for tests.
  */
+@SuppressWarnings("unused")
 public class TestHelper {
 
   /**

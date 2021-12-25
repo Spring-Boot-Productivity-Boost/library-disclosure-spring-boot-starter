@@ -32,6 +32,7 @@ import org.springframework.context.annotation.Configuration;
 public class LibraryDisclosureAutoConfiguration {
 
   @Bean
+  @SuppressWarnings("unused")
   @ConditionalOnMissingBean(LibraryProvider.class)
   public LibraryProvider libraryProvider(@Autowired(required = false) XmlMapper xmlMapper, LibraryDisclosureProperty libraryDisclosureProperty) {
     if (xmlMapper == null) {
