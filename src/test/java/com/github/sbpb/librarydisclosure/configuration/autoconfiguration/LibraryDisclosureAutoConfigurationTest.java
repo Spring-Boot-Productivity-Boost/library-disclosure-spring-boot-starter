@@ -89,7 +89,7 @@ class LibraryDisclosureAutoConfigurationTest {
       }
 
       @Test
-      void libraryProviderBeanNotCreatedOnAvailableLibraryProviderBean() {
+      void libraryProviderBeanNotCreatedOnAnotherAvailableLibraryProviderBean() {
         applicationContextRunner.withBean("anotherLibraryProvider", LibraryProviderTestImpl.class)
                                 .run(context -> {
                                   assertThat(context).hasSingleBean(LibraryProvider.class);
