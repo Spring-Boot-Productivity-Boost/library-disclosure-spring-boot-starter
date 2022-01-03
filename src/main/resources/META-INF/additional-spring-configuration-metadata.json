@@ -4,6 +4,11 @@
       "name": "sbpb.librarydisclosure.enabled",
       "type": "java.lang.Boolean",
       "description": "Whether to enable auto-configuration for library disclosure."
+    },
+    {
+      "name": "sbpb.librarydisclosure.actuator.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to expose library disclosure information via an actuator endpoint."
     }
   ]
 }
