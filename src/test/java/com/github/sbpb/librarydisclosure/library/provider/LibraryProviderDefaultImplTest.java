@@ -1,6 +1,7 @@
 package com.github.sbpb.librarydisclosure.library.provider;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.times;
@@ -96,6 +97,13 @@ class LibraryProviderDefaultImplTest {
     testee.getLicenseSummary();
 
     verify(xmlMapper, times(1)).readValue(any(File.class), eq(LicenseSummary.class));
+  }
+
+  @Test
+  void getLicenseSummaryRethrowsException() throws IOException {
+    when(resource.getFile()).thenThrow(IOException.class);
+
+    assertThrows(IOException.class, () -> testee.getLicenseSummary());
   }
 
 }
