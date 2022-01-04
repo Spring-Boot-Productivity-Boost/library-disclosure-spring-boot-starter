@@ -11,12 +11,13 @@
     <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/tags"><img src="https://img.shields.io/github/v/tag/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?display_name=tag&logo=github&logoColor=white"></a>
     <a href="https://opensource.org/licenses/mit-license.php"><img src="https://img.shields.io/github/license/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=Open Source Initiative&logoColor=white"></a>
     <br>
+    <a href="https://codebeat.co/projects/github-com-spring-boot-productivity-boost-library-disclosure-spring-boot-starter-develop"><img src="https://codebeat.co/badges/bee3f5ec-31c1-4cd9-bb43-f3d16c203080"></a>
+    <a href="https://codecov.io/gh/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter"><img src="https://codecov.io/gh/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/branch/develop/graph/badge.svg?token=67917LNJ02"></a>
+    <br>
     <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/issues"><img src="https://img.shields.io/github/issues/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=github&logoColor=white"></a>
     <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=github&logoColor=white"></a>
     <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/pulls"><img src="https://img.shields.io/github/issues-pr/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=github&logoColor=white"></a>
     <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/pulls?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=github&logoColor=white"></a>
-    <br>
-    <a href="https://codecov.io/gh/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter"><img src="https://codecov.io/gh/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/branch/develop/graph/badge.svg?token=67917LNJ02"/></a>
 </p>
 
 <p align="center">
