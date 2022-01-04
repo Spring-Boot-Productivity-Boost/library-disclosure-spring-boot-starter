@@ -15,6 +15,8 @@
     <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=github&logoColor=white"></a>
     <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/pulls"><img src="https://img.shields.io/github/issues-pr/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=github&logoColor=white"></a>
     <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/pulls?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=github&logoColor=white"></a>
+    <br>
+    <a href="https://codecov.io/gh/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter"><img src="https://codecov.io/gh/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/branch/develop/graph/badge.svg?token=67917LNJ02"/></a>
 </p>
 
 <p align="center">
