@@ -7,8 +7,14 @@
 <p align="center">Disclosure of libraries and licenses</p>
 
 <p align="center">
-    <a href="https://opensource.org/licenses/mit-license.php"><img src="https://img.shields.io/github/license/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=Open Source Initiative&logoColor=white"></a>
     <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/actions/workflows/ci-build.yaml"><img src="https://img.shields.io/github/workflow/status/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/CI build?logo=github&logoColor=white"></a>
+    <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/tags"><img src="https://img.shields.io/github/v/tag/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?display_name=tag&logo=github&logoColor=white"></a>
+    <a href="https://opensource.org/licenses/mit-license.php"><img src="https://img.shields.io/github/license/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=Open Source Initiative&logoColor=white"></a>
+    <br>
+    <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/issues"><img src="https://img.shields.io/github/issues/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=github&logoColor=white"></a>
+    <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=github&logoColor=white"></a>
+    <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/pulls"><img src="https://img.shields.io/github/issues-pr/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=github&logoColor=white"></a>
+    <a href="https://github.com/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter/pulls?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed/Spring-Boot-Productivity-Boost/library-disclosure-spring-boot-starter?logo=github&logoColor=white"></a>
 </p>
 
 <p align="center">
