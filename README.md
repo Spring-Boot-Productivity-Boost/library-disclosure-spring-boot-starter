@@ -28,7 +28,7 @@
     <a href="#features">Features</a> •
     <a href="#how-to-use">How To Use</a> •
     <a href="#changelog">Changelog</a> •
-    <a href="#links-and-resources">Links and Resources</a> •
+    <a href="#links-and-resources">Links And Resources</a> •
     <a href="#license">License</a>
 </p>
 
@@ -36,7 +36,15 @@
 
 ## TL;DR
 
-Tbd.
+Add the [License Maven Plugin](https://www.mojohaus.org/license-maven-plugin/index.html) to the `<build>` section of the Spring Boot Maven project. Execute it
+with the `download-licenses` goal and make sure that the generated `licenses.xml` file is included in the packed JAR.
+
+To disclose project libraries and licenses, additionally put this dependency on the classpath of the Spring Boot project. By default, it loads
+the `licenses.xml` file as a resource from `classpath:/BOOT-INF/classes/`.
+
+When the [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html) is on the classpath as well, it serves the
+libraries and licenses as an actuator endpoint at `/actuator/librarydisclosure`. Otherwise, the `LibraryProvider` bean can be injected in the client code for
+individual usage.
 
 ## About
 
@@ -62,7 +70,7 @@ Tbd.
 
 Tbd.
 
-## Links and Resources
+## Links And Resources
 
 * [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)
 * [License Maven Plugin](https://www.mojohaus.org/license-maven-plugin/index.html)
