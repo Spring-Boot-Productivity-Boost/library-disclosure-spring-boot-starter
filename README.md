@@ -68,4 +68,4 @@ Tbd.
 
 ## License
 
-Tbd.
+[MIT License](https://opensource.org/licenses/mit-license.php) copyright (c) 2021 Spring Boot Productivity Boost.
