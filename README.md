@@ -64,7 +64,10 @@ Tbd.
 
 ## Links and Resources
 
-Tbd.
+* [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)
+* [License Maven Plugin](https://www.mojohaus.org/license-maven-plugin/index.html)
+* [Intellij Java Google Style](https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml)
+* [Checkstyle Google Checks](https://github.com/checkstyle/checkstyle/blob/checkstyle-8.30/src/main/resources/google_checks.xml)
 
 ## License
 
