@@ -63,6 +63,15 @@ with the `download-licenses` goal and make sure that the generated `licenses.xml
 To disclose project libraries and licenses, additionally put this dependency on the classpath of the Spring Boot project. By default, it loads
 the `licenses.xml` file as a resource from `classpath:/BOOT-INF/classes/`.
 
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.github.sbpb</groupId>
+    <artifactId>library-disclosure-spring-boot-starter</artifactId>
+  </dependency>
+</dependencies>
+```
+
 When the [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html) is on the classpath as well and
 the `librarydisclosure` endpoint is exposed, it serves the libraries and licenses as an actuator endpoint at `/actuator/librarydisclosure`. Otherwise,
 the `LibraryProvider` bean can be injected in the client code for individual usage.
