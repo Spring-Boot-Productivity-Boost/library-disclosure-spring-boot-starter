@@ -39,6 +39,21 @@
 Add the [License Maven Plugin](https://www.mojohaus.org/license-maven-plugin/index.html) to the `<build>` section of the Spring Boot Maven project. Execute it
 with the `download-licenses` goal and make sure that the generated `licenses.xml` file is included in the packed JAR.
 
+```xml
+<plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>license-maven-plugin</artifactId>
+  <executions>
+    <execution>
+      <goals>
+        <goal>download-licenses</goal>
+      </goals>
+      <phase>generate-resources</phase>
+    </execution>
+  </executions>
+</plugin>
+```
+
 To disclose project libraries and licenses, additionally put this dependency on the classpath of the Spring Boot project. By default, it loads
 the `licenses.xml` file as a resource from `classpath:/BOOT-INF/classes/`.
 
