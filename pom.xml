@@ -60,13 +60,11 @@
     <encoding>UTF-8</encoding>
     <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
-    <!-- Resources -->
-    <resources.outputDirectory>${project.build.outputDirectory}</resources.outputDirectory>
-    <resources.generatedResourcesDirectory>${project.build.directory}/generated-resources</resources.generatedResourcesDirectory>
     <!-- Lombok -->
     <lombok.sourceDirectory>${project.basedir}/src/main/java</lombok.sourceDirectory>
     <lombok.outputDirectory>${project.build.directory}/generated-sources/delombok</lombok.outputDirectory>
     <!-- Other -->
+    <licenses.outputDirectory>${project.build.outputDirectory}/licenses.xml</licenses.outputDirectory>
     <checkstyle.config>https://raw.githubusercontent.com/checkstyle/checkstyle/checkstyle-9.1/src/main/resources/google_checks.xml</checkstyle.config>
     <!-- Dependency versions -->
     <checkstyle.version>9.1</checkstyle.version>
@@ -183,6 +181,7 @@
         <configuration>
           <failOnMissing>true</failOnMissing>
           <failOnBlacklist>true</failOnBlacklist>
+          <licensesOutputFile>${licenses.outputDirectory}</licensesOutputFile>
         </configuration>
         <executions>
           <execution>
@@ -255,29 +254,6 @@
             <goals>
               <goal>jar</goal>
             </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <executions>
-          <execution>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <phase>process-resources</phase>
-            <configuration>
-              <outputDirectory>${resources.outputDirectory}</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>${resources.generatedResourcesDirectory}</directory>
-                  <includes>
-                    <include>licenses.xml</include>
-                  </includes>
-                </resource>
-              </resources>
-            </configuration>
           </execution>
         </executions>
       </plugin>
