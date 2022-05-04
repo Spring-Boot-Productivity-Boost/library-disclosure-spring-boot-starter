@@ -40,7 +40,6 @@ Add the [License Maven Plugin](https://www.mojohaus.org/license-maven-plugin/ind
 with the `download-licenses` goal and make sure that the generated `licenses.xml` file is included in the packed JAR.
 
 ```xml
-
 <plugins>
   <plugin>
     <groupId>org.codehaus.mojo</groupId>
@@ -110,48 +109,6 @@ Properties
 ## Changelog
 
 Tbd.
-
-== Changelog
-
-=== https://github.com/pixelstuermer/pixieset-downloader/tree/master[Unreleased] (XXXX-XX-XX)
-
-https://github.com/pixelstuermer/pixieset-downloader/compare/1.0.2..master[Full Changelog]
-
-==== Added
-
-==== Changed
-
-==== Fixed
-
-=== https://github.com/pixelstuermer/pixieset-downloader/tree/1.0.2[1.0.2] (2021-11-23)
-
-https://github.com/pixelstuermer/pixieset-downloader/compare/1.0.1..1.0.2[Full Changelog]
-
-==== Fixed
-
-* Enabled HTTP requests by using `none` as `user-agent` header
-
-=== https://github.com/pixelstuermer/pixieset-downloader/tree/1.0.1[1.0.1] (2021-08-14)
-
-https://github.com/pixelstuermer/pixieset-downloader/compare/1.0.0..1.0.1[Full Changelog]
-
-==== Added
-
-* Readme and automated GitHub pages
-
-==== Fixed
-
-* Minor typos
-
-=== https://github.com/pixelstuermer/pixieset-downloader/tree/1.0.0[1.0.0] (2021-08-14)
-
-==== Added
-
-* Basic functionality and project setup
-* Batch download of Pixieset collections
-  ** Based on a base url, a collection ID and key, a gallery name and a valid HTTP cookie
-  ** With the possibility to specify target file names and a counter separator
-  ** With an optional filter for image names via RegEx
 
 ## Links And Resources
 
