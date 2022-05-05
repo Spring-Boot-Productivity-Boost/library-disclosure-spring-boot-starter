@@ -12,7 +12,7 @@
 
   <groupId>com.github.sbpb</groupId>
   <artifactId>library-disclosure-spring-boot-starter</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0-readme-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>library-disclosure-spring-boot-starter</name>
@@ -60,13 +60,11 @@
     <encoding>UTF-8</encoding>
     <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
-    <!-- Resources -->
-    <resources.outputDirectory>${project.build.outputDirectory}</resources.outputDirectory>
-    <resources.generatedResourcesDirectory>${project.build.directory}/generated-resources</resources.generatedResourcesDirectory>
     <!-- Lombok -->
     <lombok.sourceDirectory>${project.basedir}/src/main/java</lombok.sourceDirectory>
     <lombok.outputDirectory>${project.build.directory}/generated-sources/delombok</lombok.outputDirectory>
     <!-- Other -->
+    <licenses.outputDirectory>${project.build.outputDirectory}/licenses.xml</licenses.outputDirectory>
     <checkstyle.config>https://raw.githubusercontent.com/checkstyle/checkstyle/checkstyle-9.1/src/main/resources/google_checks.xml</checkstyle.config>
     <!-- Dependency versions -->
     <checkstyle.version>9.1</checkstyle.version>
@@ -77,6 +75,7 @@
     <maven-checkstyle-plugin.version>3.1.2</maven-checkstyle-plugin.version>
     <spotbugs-maven-plugin.version>4.5.0.0</spotbugs-maven-plugin.version>
     <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
+    <jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
   </properties>
 
   <dependencies>
@@ -182,6 +181,7 @@
         <configuration>
           <failOnMissing>true</failOnMissing>
           <failOnBlacklist>true</failOnBlacklist>
+          <licensesOutputFile>${licenses.outputDirectory}</licensesOutputFile>
         </configuration>
         <executions>
           <execution>
@@ -258,25 +258,15 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>${jacoco-maven-plugin.version}</version>
         <executions>
           <execution>
             <goals>
-              <goal>copy-resources</goal>
+              <goal>prepare-agent</goal>
+              <goal>report</goal>
             </goals>
-            <phase>process-resources</phase>
-            <configuration>
-              <outputDirectory>${resources.outputDirectory}</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>${resources.generatedResourcesDirectory}</directory>
-                  <includes>
-                    <include>licenses.xml</include>
-                  </includes>
-                </resource>
-              </resources>
-            </configuration>
           </execution>
         </executions>
       </plugin>
