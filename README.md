@@ -104,8 +104,6 @@ Tbd.
 
 Tbd.
 
-Properties
-
 ## Changelog
 
 Tbd.
